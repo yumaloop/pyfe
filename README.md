@@ -1,8 +1,12 @@
 # afe2_backtest
 
+py backtest
+
+### pypi packages
+
 ```
-# install pandas-datareader
-pip install git+https://github.com/pydata/pandas-datareader.git
+pip3 install yfinance
+pip3 install pandas_datareader
 ```
 
 ### sample
