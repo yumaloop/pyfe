@@ -7,6 +7,7 @@ py backtest
 ```
 pip3 install yfinance
 pip3 install pandas_datareader
+pip3 install cvxopt
 ```
 
 ### sample
