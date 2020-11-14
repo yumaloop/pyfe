@@ -51,16 +51,25 @@ http://www.eoddata.com/symbols.aspx?AspxAutoDetectCookieSupport=1
 - 
 - Japan
     - TOPIX500
-    - NIKKEI225
+        - `^TPX`(stooq)
+    - TOPIX Core30
+        - `^TPXC30`(stooq)
+    - Nikkei 225 
+        - `^N225`(yahoo), `^NKX`(stooq)
 - United States
-    - S&P 500 Index (SP500)
-    - Dow Jones Industrial Average (DJIA)
-    - ...
+    - S&P 500 Index
+        - `^GSPC`(yahoo), `^SPX`(stooq)
+    - Dow Jones Industrial Average
+        - `^DJI`(yahoo), `^DJI`(stooq)
+    - NASDAQ-100
+        - `^NDX`(yahoo), `^NDX`(stooq)
+    - NASDAQ Composite Index
+        - `^IXIC`(yahoo), `^NDQ`(stooq)
 
 ### Market data
 
 - Japan
-    - TSE, (Tokyo Stock Exchange)<br>
+    - TSE (Tokyo Stock Exchange)<br>
         - Operating company: Japan Exchange Group, Inc. (JPX)<br>
           https://www.jpx.co.jp/
         - 統計情報(株式関連)<br>
@@ -80,7 +89,8 @@ http://www.eoddata.com/symbols.aspx?AspxAutoDetectCookieSupport=1
           https://old.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=nyse&render=download  
         - Directory of all stocks<br>
           download link: https://www.nyse.com/listings_directory/stock
-    - NYSE American (known as `American Stock Exchange, AMEX` before 2017)
-        - Operaing company: 
+    - NYSE MKT (also known as `American Stock Exchange, AMEX` before 2017)
+        - Operating company: Intercontinental Exchange (ICE)<br>
+          https://www.theice.com/index
         - List of all stocks<br>
           download link: https://old.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=amex&render=download
