@@ -1,103 +1,102 @@
-Name,Name_jp,Area
-TPX500:IND,TOPIX 500 INDEX (東証),日本
-TPX100:IND,TOPIX 100 INDEX (東証),日本
-NKY:IND,日経平均株価,日本
-NKY500:IND,日経500平均,日本
-TPX:IND,TOPIX (東証株価指数),日本
-NEY:IND,日経300指数,日本
-TSEREIT:IND,東証REIT指数,日本
-JSDA:IND,JASDAQ ｲﾝﾃﾞｯｸｽ,日本
-TPXC30:IND,TOPIX CORE 30 IDX (東証),日本
-TSEMOTHR:IND,東証マザーズ指数,日本
-TPXSM:IND,TOPIX SMALL INDEX (東証),日本
-TPXM400:IND,TOPIX MID 400 INDX (東証),日本
-NKYJQ:IND,日経ｼﾞｬｽﾀﾞｯｸ平均,日本
-TSE2:IND,東証２部　株価指数,,日本
-TPXL70:IND,TOPIX LARGE 70 IDX (東証),日本
-SHCOMP:IND,中国 上海総合指数,中国
-SHASHR:IND,中国 上海A株指数,中国
-SZASHR:IND,中国 深ｾﾝA株指数,中国
-SICOM:IND,中国 深ｾﾝ成分指数,中国
-SHBSHR:IND,中国 上海B株指数,中国
-SZBSHR:IND,中国 深ｾﾝB株指数,中国
-SSE50:IND,中国 上海50A株指数,中国
-SSE180:IND,中国 上海180A株指数,中国
-SHNCOMP:IND,中国 上海新総合指数(G株),中国
-SZ399006:IND,中国 創業板指数,,中国
-SHSZ300:IND,上海/ｼﾝｾﾝ CSI300指数,中国
-SZCOMP:IND,中国 深ｾﾝ総合指数,中国
-HSML100:IND,ﾊﾝｾﾝ中国本土企業株100指数,香港
-H-FIN:IND,ﾊﾝｾﾝ中国H株金融指数,香港
-HKSPGEM:IND,S&P/HKEx GEM指数,香港
-SAXCME:IND,S&Pｱｼﾞｱ50指数,香港
-HSFML25:IND,ﾊﾝｾﾝ中国本土企業株25指数,香港
-HKSPLC25:IND,S&P/HKEx 大型株指数,香港
-HSI:IND,香港 ﾊﾝｾﾝ指数,香港
-HSCEI:IND,ﾊﾝｾﾝ中国企業株指数(H株),香港
-HSHK35:IND,ﾊﾝｾﾝ香港35指数,,香港
-HSCCI:IND,ﾊﾝｾﾝ中国ﾚｯﾄﾞﾁｯﾌﾟ指数,香港
-HSCI:IND,ﾊﾝｾﾝ総合指数,香港
-KOSDAQ:IND,ｺｽﾀﾞｯｸ指数,韓国
-KRX100:IND,韓国 KRX100指数,韓国
-KOSPI:IND,韓国総合株価指数,韓国
-KOSPI2:IND,韓国200種株価指数,韓国
-KOSPI50:IND,韓国50種株価指数,韓国
-KOSTAR:IND,ｺｽﾀﾞｯｸ STAR指数,韓国
-KOSPI100:IND,韓国100種株価指数,,韓国
-BSE100:IND,S&P･BSE100種指数,インド
-SENSEX:IND,S&P BSEｾﾝｾｯｸｽ,インド
-NIFTY:IND,CNXﾆﾌﾃｨ指数,インド
-BSE500:IND,S&P･BSE500種指数,インド
-BSE200:IND,S&P･BSE200種指数,インド
-NZX20:IND,S&P/NZX 20 Index,ニュージーランド
-NZSE:IND,NZSX 全普通株指数,ニュージーランド
-NZSE50FG:IND,NZX50種ｸﾞﾛｽ指数,,ニュージーランド
-NZSE10:IND,NZSX ﾄｯﾌﾟ10指数,ニュージーランド
-TWSE:IND,加権指数,台湾
-TW50:IND,台湾50指数,,台湾
-TWOTCI:IND,台湾ｸﾞﾚﾀｲ証券市場指数,台湾
-AS51:IND,S&P/ASX200指数,オーストラリア
-AS52:IND,S&P/ASX300指数,オーストラリア
-AS30:IND,ASX 全普通株指数,オーストラリア
-KSE100:IND,ｶﾗﾁ KSE100指数,パキスタン
-KSE30:IND,ｶﾗﾁ KSE30指数,パキスタン
-KSE:IND,ｶﾗﾁ 全株指数,パキスタン
-FBMKLCI:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱKLCIｲﾝﾃﾞｯｸｽ,マレーシア
-FBMEMAS:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱEMASｲﾝﾃﾞｯｸｽ,マレーシア
-JCI:IND,ｼﾞｬｶﾙﾀ 総合指数,インドネシア
-LQ45:IND,ｼﾞｬｶﾙﾀ LQ-45種,インドネシア
-STI:IND,ST指数,シンガポール
-FSTAS:IND,ｼﾝｶﾞﾎﾟｰﾙ FTSE STｵｰﾙｼｪｱ,シンガポール
-SET50:IND,ﾀｲ SET 50種,タイ
-SET:IND,ﾀｲ SET指数,タイ
-VHINDEX:IND,ﾊﾉｲ証券取引所株価指数,ベトナム
-VNINDEX:IND,ﾍﾞﾄﾅﾑ VN指数,ベトナム
-DSEX:IND,DSE Broad Index,バングラデシュ
-MSETOP:IND,ﾓﾝｺﾞﾙ ﾄｯﾌﾟ20指数,モンゴル
-LSXC:IND,ﾗｵｽ総合指数,ラオス人民民主共和国
-PCOMP:IND,ﾌｨﾘﾋﾟﾝ 総合指数,フィリピン
-CSEALL:IND,ｽﾘﾗﾝｶ ｺﾛﾝﾎﾞ全株指数,スリランカ
-
-CTRN:IND,ﾅｽﾀﾞｯｸ 運輸株指数,アメリカ 中南米
-SML:IND,S&P 小型株600種,アメリカ 中南米
-RTY:IND,ﾗｯｾﾙ2000種指数,アメリカ 中南米
-NBI:IND,ﾅｽﾀﾞｯｸ ﾊﾞｲｵﾃｸﾉﾛｼﾞｰ株指数,アメリカ 中南米
-INDU:IND,NYﾀﾞｳ 工業株30種,アメリカ 中南米
-CBNK:IND,ﾅｽﾀﾞｯｸ 銀行株指数,アメリカ 中南米
-BBREIT:IND,ﾌﾞﾙｰﾑﾊﾞｰｸﾞ REIT指数,アメリカ 中南米
-NYA:IND,NYSE 総合指数,アメリカ 中南米
-NDX:IND,ﾅｽﾀﾞｯｸ 100指数,アメリカ 中南米
-CFIN:IND,ﾅｽﾀﾞｯｸ 金融株指数,アメリカ 中南米
-CINS:IND,ﾅｽﾀﾞｯｸ 保険株指数,アメリカ 中南米
-TRAN:IND,NYﾀﾞｳ 輸送株20種,アメリカ 中南米
-CUTL:IND,ﾅｽﾀﾞｯｸ 通信株指数,アメリカ 中南米
-SPX:IND,S&P 500種,アメリカ 中南米
-CCMP:IND,ﾅｽﾀﾞｯｸ 総合指数,アメリカ 中南米
-UTIL:IND,NYﾀﾞｳ 公共株15種,アメリカ 中南米
-BKX:IND,KBW銀行株指数,アメリカ 中南米
-RIY:IND,ﾗｯｾﾙ1000種指数,アメリカ 中南米
-NDF:IND,ﾅｽﾀﾞｯｸ 金融100指数,アメリカ 中南米
-RAY:IND,ﾗｯｾﾙ3000種指数,アメリカ 中南米
-IXK:IND,ﾅｽﾀﾞｯｸ ｺﾝﾋﾟｭｰﾀｰ株指数,アメリカ 中南米
-MID:IND,S&P 中型株400種,アメリカ 中南米
-CIND:IND,ﾅｽﾀﾞｯｸ 工業株指数,アメリカ 中南米
+name,name_jp,country,area
+TPX500:IND,TOPIX 500 INDEX (東証),日本,アジア太平洋
+TPX100:IND,TOPIX 100 INDEX (東証),日本,アジア太平洋
+NKY:IND,日経平均株価,日本,アジア太平洋
+NKY500:IND,日経500平均,日本,アジア太平洋
+TPX:IND,TOPIX (東証株価指数),日本,アジア太平洋
+NEY:IND,日経300指数,日本,アジア太平洋
+TSEREIT:IND,東証REIT指数,日本,アジア太平洋
+JSDA:IND,JASDAQ ｲﾝﾃﾞｯｸｽ,日本,アジア太平洋
+TPXC30:IND,TOPIX CORE 30 IDX (東証),日本,アジア太平洋
+TSEMOTHR:IND,東証マザーズ指数,日本,アジア太平洋
+TPXSM:IND,TOPIX SMALL INDEX (東証),日本,アジア太平洋
+TPXM400:IND,TOPIX MID 400 INDX (東証),日本,アジア太平洋
+NKYJQ:IND,日経ｼﾞｬｽﾀﾞｯｸ平均,日本,アジア太平洋
+TSE2:IND,東証２部　株価指数,日本,アジア太平洋
+TPXL70:IND,TOPIX LARGE 70 IDX (東証),日本,アジア太平洋
+SHCOMP:IND,中国 上海総合指数,中国,アジア太平洋
+SHASHR:IND,中国 上海A株指数,中国,アジア太平洋
+SZASHR:IND,中国 深ｾﾝA株指数,中国,アジア太平洋
+SICOM:IND,中国 深ｾﾝ成分指数,中国,アジア太平洋
+SHBSHR:IND,中国 上海B株指数,中国,アジア太平洋
+SZBSHR:IND,中国 深ｾﾝB株指数,中国,アジア太平洋
+SSE50:IND,中国 上海50A株指数,中国,アジア太平洋
+SSE180:IND,中国 上海180A株指数,中国,アジア太平洋
+SHNCOMP:IND,中国 上海新総合指数(G株),中国,アジア太平洋
+SZ399006:IND,中国 創業板指数,,中国,アジア太平洋
+SHSZ300:IND,上海/ｼﾝｾﾝ CSI300指数,中国,アジア太平洋
+SZCOMP:IND,中国 深ｾﾝ総合指数,中国,アジア太平洋
+HSML100:IND,ﾊﾝｾﾝ中国本土企業株100指数,香港,アジア太平洋
+H-FIN:IND,ﾊﾝｾﾝ中国H株金融指数,香港,アジア太平洋
+HKSPGEM:IND,S&P/HKEx GEM指数,香港,アジア太平洋
+SAXCME:IND,S&Pｱｼﾞｱ50指数,香港,アジア太平洋
+HSFML25:IND,ﾊﾝｾﾝ中国本土企業株25指数,香港,アジア太平洋
+HKSPLC25:IND,S&P/HKEx 大型株指数,香港,アジア太平洋
+HSI:IND,香港 ﾊﾝｾﾝ指数,香港,アジア太平洋
+HSCEI:IND,ﾊﾝｾﾝ中国企業株指数(H株),香港,アジア太平洋
+HSHK35:IND,ﾊﾝｾﾝ香港35指数,,香港,アジア太平洋
+HSCCI:IND,ﾊﾝｾﾝ中国ﾚｯﾄﾞﾁｯﾌﾟ指数,香港,アジア太平洋
+HSCI:IND,ﾊﾝｾﾝ総合指数,香港,アジア太平洋
+KOSDAQ:IND,ｺｽﾀﾞｯｸ指数,韓国,アジア太平洋
+KRX100:IND,韓国 KRX100指数,韓国,アジア太平洋
+KOSPI:IND,韓国総合株価指数,韓国,アジア太平洋
+KOSPI2:IND,韓国200種株価指数,韓国,アジア太平洋
+KOSPI50:IND,韓国50種株価指数,韓国,アジア太平洋
+KOSTAR:IND,ｺｽﾀﾞｯｸ STAR指数,韓国,アジア太平洋
+KOSPI100:IND,韓国100種株価指数,,韓国,アジア太平洋
+BSE100:IND,S&P･BSE100種指数,インド,アジア太平洋
+SENSEX:IND,S&P BSEｾﾝｾｯｸｽ,インド,アジア太平洋
+NIFTY:IND,CNXﾆﾌﾃｨ指数,インド,アジア太平洋
+BSE500:IND,S&P･BSE500種指数,インド,アジア太平洋
+BSE200:IND,S&P･BSE200種指数,インド,アジア太平洋
+NZX20:IND,S&P/NZX 20 Index,ニュージーランド,アジア太平洋
+NZSE:IND,NZSX 全普通株指数,ニュージーランド,アジア太平洋
+NZSE50FG:IND,NZX50種ｸﾞﾛｽ指数,,ニュージーランド,アジア太平洋
+NZSE10:IND,NZSX ﾄｯﾌﾟ10指数,ニュージーランド,アジア太平洋
+TWSE:IND,加権指数,台湾,アジア太平洋
+TW50:IND,台湾50指数,,台湾,アジア太平洋
+TWOTCI:IND,台湾ｸﾞﾚﾀｲ証券市場指数,台湾,アジア太平洋
+AS51:IND,S&P/ASX200指数,オーストラリア,アジア太平洋
+AS52:IND,S&P/ASX300指数,オーストラリア,アジア太平洋
+AS30:IND,ASX 全普通株指数,オーストラリア,アジア太平洋
+KSE100:IND,ｶﾗﾁ KSE100指数,パキスタン,アジア太平洋
+KSE30:IND,ｶﾗﾁ KSE30指数,パキスタン,アジア太平洋
+KSE:IND,ｶﾗﾁ 全株指数,パキスタン,アジア太平洋
+FBMKLCI:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱKLCIｲﾝﾃﾞｯｸｽ,マレーシア,アジア太平洋
+FBMEMAS:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱEMASｲﾝﾃﾞｯｸｽ,マレーシア,アジア太平洋
+JCI:IND,ｼﾞｬｶﾙﾀ 総合指数,インドネシア,アジア太平洋
+LQ45:IND,ｼﾞｬｶﾙﾀ LQ-45種,インドネシア,アジア太平洋
+STI:IND,ST指数,シンガポール,アジア太平洋
+FSTAS:IND,ｼﾝｶﾞﾎﾟｰﾙ FTSE STｵｰﾙｼｪｱ,シンガポール,アジア太平洋
+SET50:IND,ﾀｲ SET 50種,タイ,アジア太平洋
+SET:IND,ﾀｲ SET指数,タイ,アジア太平洋
+VHINDEX:IND,ﾊﾉｲ証券取引所株価指数,ベトナム,アジア太平洋
+VNINDEX:IND,ﾍﾞﾄﾅﾑ VN指数,ベトナム,アジア太平洋
+DSEX:IND,DSE Broad Index,バングラデシュ,アジア太平洋
+MSETOP:IND,ﾓﾝｺﾞﾙ ﾄｯﾌﾟ20指数,モンゴル,アジア太平洋
+LSXC:IND,ﾗｵｽ総合指数,ラオス人民民主共和国,アジア太平洋
+PCOMP:IND,ﾌｨﾘﾋﾟﾝ 総合指数,フィリピン,アジア太平洋
+CSEALL:IND,ｽﾘﾗﾝｶ ｺﾛﾝﾎﾞ全株指数,スリランカ,アジア太平洋
+CTRN:IND,ﾅｽﾀﾞｯｸ 運輸株指数,アメリカ,アメリカ 中南米
+SML:IND,S&P 小型株600種,アメリカ,アメリカ 中南米
+RTY:IND,ﾗｯｾﾙ2000種指数,アメリカ,アメリカ 中南米
+NBI:IND,ﾅｽﾀﾞｯｸ ﾊﾞｲｵﾃｸﾉﾛｼﾞｰ株指数,アメリカ,アメリカ 中南米
+INDU:IND,NYﾀﾞｳ 工業株30種,アメリカ,アメリカ 中南米
+CBNK:IND,ﾅｽﾀﾞｯｸ 銀行株指数,アメリカ,アメリカ 中南米
+BBREIT:IND,ﾌﾞﾙｰﾑﾊﾞｰｸﾞ REIT指数,アメリカ,アメリカ 中南米
+NYA:IND,NYSE 総合指数,アメリカ,アメリカ 中南米
+NDX:IND,ﾅｽﾀﾞｯｸ 100指数,アメリカ,アメリカ 中南米
+CFIN:IND,ﾅｽﾀﾞｯｸ 金融株指数,アメリカ,アメリカ 中南米
+CINS:IND,ﾅｽﾀﾞｯｸ 保険株指数,アメリカ,アメリカ 中南米
+TRAN:IND,NYﾀﾞｳ 輸送株20種,アメリカ,アメリカ 中南米
+CUTL:IND,ﾅｽﾀﾞｯｸ 通信株指数,アメリカ,アメリカ 中南米
+SPX:IND,S&P 500種,アメリカ,アメリカ 中南米
+CCMP:IND,ﾅｽﾀﾞｯｸ 総合指数,アメリカ,アメリカ 中南米
+UTIL:IND,NYﾀﾞｳ 公共株15種,アメリカ,アメリカ 中南米
+BKX:IND,KBW銀行株指数,アメリカ,アメリカ 中南米
+RIY:IND,ﾗｯｾﾙ1000種指数,アメリカ,アメリカ 中南米
+NDF:IND,ﾅｽﾀﾞｯｸ 金融100指数,アメリカ,アメリカ 中南米
+RAY:IND,ﾗｯｾﾙ3000種指数,アメリカ,アメリカ 中南米
+IXK:IND,ﾅｽﾀﾞｯｸ ｺﾝﾋﾟｭｰﾀｰ株指数,アメリカ,アメリカ 中南米
+MID:IND,S&P 中型株400種,アメリカ,アメリカ 中南米
+CIND:IND,ﾅｽﾀﾞｯｸ 工業株指数,アメリカ,アメリカ 中南米
