@@ -1,5 +1,5 @@
 Nasdaq Traded,Security Name,Listing Exchange,Market Category,ETF,Round Lot Size,Test Issue,Financial Status,CQS Symbol,NASDAQ Symbol,NextShares
-True,"Agilent Technologies, Inc. Common Stock",N, ,False,100.0,False,,A,A,False
+True,Agilent Technologies, Inc. Common Stock",N, ,False,100.0,False,,A,A,False
 True,Alcoa Corporation Common Stock ,N, ,False,100.0,False,,AA,AA,False
 True,Listed Funds Trust AAF First Priority CLO Bond ETF,P, ,True,100.0,False,,AAA,AAA,False
 True,Perth Mint Physical Gold ETF,P, ,True,100.0,False,,AAAU,AAAU,False
