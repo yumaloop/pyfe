@@ -1,102 +1,199 @@
 name,name_jp,country,area
-TPX500:IND,TOPIX 500 INDEX (東証),日本,アジア太平洋
-TPX100:IND,TOPIX 100 INDEX (東証),日本,アジア太平洋
-NKY:IND,日経平均株価,日本,アジア太平洋
-NKY500:IND,日経500平均,日本,アジア太平洋
-TPX:IND,TOPIX (東証株価指数),日本,アジア太平洋
-NEY:IND,日経300指数,日本,アジア太平洋
-TSEREIT:IND,東証REIT指数,日本,アジア太平洋
-JSDA:IND,JASDAQ ｲﾝﾃﾞｯｸｽ,日本,アジア太平洋
-TPXC30:IND,TOPIX CORE 30 IDX (東証),日本,アジア太平洋
-TSEMOTHR:IND,東証マザーズ指数,日本,アジア太平洋
-TPXSM:IND,TOPIX SMALL INDEX (東証),日本,アジア太平洋
-TPXM400:IND,TOPIX MID 400 INDX (東証),日本,アジア太平洋
-NKYJQ:IND,日経ｼﾞｬｽﾀﾞｯｸ平均,日本,アジア太平洋
-TSE2:IND,東証２部　株価指数,日本,アジア太平洋
-TPXL70:IND,TOPIX LARGE 70 IDX (東証),日本,アジア太平洋
-SHCOMP:IND,中国 上海総合指数,中国,アジア太平洋
-SHASHR:IND,中国 上海A株指数,中国,アジア太平洋
-SZASHR:IND,中国 深ｾﾝA株指数,中国,アジア太平洋
-SICOM:IND,中国 深ｾﾝ成分指数,中国,アジア太平洋
-SHBSHR:IND,中国 上海B株指数,中国,アジア太平洋
-SZBSHR:IND,中国 深ｾﾝB株指数,中国,アジア太平洋
-SSE50:IND,中国 上海50A株指数,中国,アジア太平洋
-SSE180:IND,中国 上海180A株指数,中国,アジア太平洋
-SHNCOMP:IND,中国 上海新総合指数(G株),中国,アジア太平洋
-SZ399006:IND,中国 創業板指数,中国,アジア太平洋
-SHSZ300:IND,上海/ｼﾝｾﾝ CSI300指数,中国,アジア太平洋
-SZCOMP:IND,中国 深ｾﾝ総合指数,中国,アジア太平洋
-HSML100:IND,ﾊﾝｾﾝ中国本土企業株100指数,香港,アジア太平洋
-H-FIN:IND,ﾊﾝｾﾝ中国H株金融指数,香港,アジア太平洋
-HKSPGEM:IND,S&P/HKEx GEM指数,香港,アジア太平洋
-SAXCME:IND,S&Pｱｼﾞｱ50指数,香港,アジア太平洋
-HSFML25:IND,ﾊﾝｾﾝ中国本土企業株25指数,香港,アジア太平洋
-HKSPLC25:IND,S&P/HKEx 大型株指数,香港,アジア太平洋
-HSI:IND,香港 ﾊﾝｾﾝ指数,香港,アジア太平洋
-HSCEI:IND,ﾊﾝｾﾝ中国企業株指数(H株),香港,アジア太平洋
-HSHK35:IND,ﾊﾝｾﾝ香港35指数,香港,アジア太平洋
-HSCCI:IND,ﾊﾝｾﾝ中国ﾚｯﾄﾞﾁｯﾌﾟ指数,香港,アジア太平洋
-HSCI:IND,ﾊﾝｾﾝ総合指数,香港,アジア太平洋
-KOSDAQ:IND,ｺｽﾀﾞｯｸ指数,韓国,アジア太平洋
-KRX100:IND,韓国 KRX100指数,韓国,アジア太平洋
-KOSPI:IND,韓国総合株価指数,韓国,アジア太平洋
-KOSPI2:IND,韓国200種株価指数,韓国,アジア太平洋
-KOSPI50:IND,韓国50種株価指数,韓国,アジア太平洋
-KOSTAR:IND,ｺｽﾀﾞｯｸ STAR指数,韓国,アジア太平洋
-KOSPI100:IND,韓国100種株価指数,韓国,アジア太平洋
-BSE100:IND,S&P･BSE100種指数,インド,アジア太平洋
-SENSEX:IND,S&P BSEｾﾝｾｯｸｽ,インド,アジア太平洋
-NIFTY:IND,CNXﾆﾌﾃｨ指数,インド,アジア太平洋
-BSE500:IND,S&P･BSE500種指数,インド,アジア太平洋
-BSE200:IND,S&P･BSE200種指数,インド,アジア太平洋
-NZX20:IND,S&P/NZX 20 Index,ニュージーランド,アジア太平洋
-NZSE:IND,NZSX 全普通株指数,ニュージーランド,アジア太平洋
-NZSE50FG:IND,NZX50種ｸﾞﾛｽ指数,ニュージーランド,アジア太平洋
-NZSE10:IND,NZSX ﾄｯﾌﾟ10指数,ニュージーランド,アジア太平洋
-TWSE:IND,加権指数,台湾,アジア太平洋
-TW50:IND,台湾50指数,台湾,アジア太平洋
-TWOTCI:IND,台湾ｸﾞﾚﾀｲ証券市場指数,台湾,アジア太平洋
-AS51:IND,S&P/ASX200指数,オーストラリア,アジア太平洋
-AS52:IND,S&P/ASX300指数,オーストラリア,アジア太平洋
-AS30:IND,ASX 全普通株指数,オーストラリア,アジア太平洋
-KSE100:IND,ｶﾗﾁ KSE100指数,パキスタン,アジア太平洋
-KSE30:IND,ｶﾗﾁ KSE30指数,パキスタン,アジア太平洋
-KSE:IND,ｶﾗﾁ 全株指数,パキスタン,アジア太平洋
-FBMKLCI:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱKLCIｲﾝﾃﾞｯｸｽ,マレーシア,アジア太平洋
-FBMEMAS:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱEMASｲﾝﾃﾞｯｸｽ,マレーシア,アジア太平洋
-JCI:IND,ｼﾞｬｶﾙﾀ 総合指数,インドネシア,アジア太平洋
-LQ45:IND,ｼﾞｬｶﾙﾀ LQ-45種,インドネシア,アジア太平洋
-STI:IND,ST指数,シンガポール,アジア太平洋
-FSTAS:IND,ｼﾝｶﾞﾎﾟｰﾙ FTSE STｵｰﾙｼｪｱ,シンガポール,アジア太平洋
-SET50:IND,ﾀｲ SET 50種,タイ,アジア太平洋
-SET:IND,ﾀｲ SET指数,タイ,アジア太平洋
-VHINDEX:IND,ﾊﾉｲ証券取引所株価指数,ベトナム,アジア太平洋
-VNINDEX:IND,ﾍﾞﾄﾅﾑ VN指数,ベトナム,アジア太平洋
-DSEX:IND,DSE Broad Index,バングラデシュ,アジア太平洋
-MSETOP:IND,ﾓﾝｺﾞﾙ ﾄｯﾌﾟ20指数,モンゴル,アジア太平洋
-LSXC:IND,ﾗｵｽ総合指数,ラオス人民民主共和国,アジア太平洋
-PCOMP:IND,ﾌｨﾘﾋﾟﾝ 総合指数,フィリピン,アジア太平洋
-CSEALL:IND,ｽﾘﾗﾝｶ ｺﾛﾝﾎﾞ全株指数,スリランカ,アジア太平洋
-CTRN:IND,ﾅｽﾀﾞｯｸ 運輸株指数,アメリカ,アメリカ 中南米
-SML:IND,S&P 小型株600種,アメリカ,アメリカ 中南米
-RTY:IND,ﾗｯｾﾙ2000種指数,アメリカ,アメリカ 中南米
-NBI:IND,ﾅｽﾀﾞｯｸ ﾊﾞｲｵﾃｸﾉﾛｼﾞｰ株指数,アメリカ,アメリカ 中南米
-INDU:IND,NYﾀﾞｳ 工業株30種,アメリカ,アメリカ 中南米
-CBNK:IND,ﾅｽﾀﾞｯｸ 銀行株指数,アメリカ,アメリカ 中南米
-BBREIT:IND,ﾌﾞﾙｰﾑﾊﾞｰｸﾞ REIT指数,アメリカ,アメリカ 中南米
-NYA:IND,NYSE 総合指数,アメリカ,アメリカ 中南米
-NDX:IND,ﾅｽﾀﾞｯｸ 100指数,アメリカ,アメリカ 中南米
-CFIN:IND,ﾅｽﾀﾞｯｸ 金融株指数,アメリカ,アメリカ 中南米
-CINS:IND,ﾅｽﾀﾞｯｸ 保険株指数,アメリカ,アメリカ 中南米
-TRAN:IND,NYﾀﾞｳ 輸送株20種,アメリカ,アメリカ 中南米
-CUTL:IND,ﾅｽﾀﾞｯｸ 通信株指数,アメリカ,アメリカ 中南米
-SPX:IND,S&P 500種,アメリカ,アメリカ 中南米
-CCMP:IND,ﾅｽﾀﾞｯｸ 総合指数,アメリカ,アメリカ 中南米
-UTIL:IND,NYﾀﾞｳ 公共株15種,アメリカ,アメリカ 中南米
-BKX:IND,KBW銀行株指数,アメリカ,アメリカ 中南米
-RIY:IND,ﾗｯｾﾙ1000種指数,アメリカ,アメリカ 中南米
-NDF:IND,ﾅｽﾀﾞｯｸ 金融100指数,アメリカ,アメリカ 中南米
-RAY:IND,ﾗｯｾﾙ3000種指数,アメリカ,アメリカ 中南米
-IXK:IND,ﾅｽﾀﾞｯｸ ｺﾝﾋﾟｭｰﾀｰ株指数,アメリカ,アメリカ 中南米
-MID:IND,S&P 中型株400種,アメリカ,アメリカ 中南米
-CIND:IND,ﾅｽﾀﾞｯｸ 工業株指数,アメリカ,アメリカ 中南米
+TPX500:IND,TOPIX 500 INDEX (東証),日本,asia-pacific
+TPX100:IND,TOPIX 100 INDEX (東証),日本,asia-pacific
+NKY:IND,日経平均株価,日本,asia-pacific
+NKY500:IND,日経500平均,日本,asia-pacific
+TPX:IND,TOPIX (東証株価指数),日本,asia-pacific
+NEY:IND,日経300指数,日本,asia-pacific
+TSEREIT:IND,東証REIT指数,日本,asia-pacific
+JSDA:IND,JASDAQ ｲﾝﾃﾞｯｸｽ,日本,asia-pacific
+TPXC30:IND,TOPIX CORE 30 IDX (東証),日本,asia-pacific
+TSEMOTHR:IND,東証マザーズ指数,日本,asia-pacific
+TPXSM:IND,TOPIX SMALL INDEX (東証),日本,asia-pacific
+TPXM400:IND,TOPIX MID 400 INDX (東証),日本,asia-pacific
+NKYJQ:IND,日経ｼﾞｬｽﾀﾞｯｸ平均,日本,asia-pacific
+TSE2:IND,東証２部　株価指数,日本,asia-pacific
+TPXL70:IND,TOPIX LARGE 70 IDX (東証),日本,asia-pacific
+SHCOMP:IND,中国 上海総合指数,中国,asia-pacific
+SHASHR:IND,中国 上海A株指数,中国,asia-pacific
+SZASHR:IND,中国 深ｾﾝA株指数,中国,asia-pacific
+SICOM:IND,中国 深ｾﾝ成分指数,中国,asia-pacific
+SHBSHR:IND,中国 上海B株指数,中国,asia-pacific
+SZBSHR:IND,中国 深ｾﾝB株指数,中国,asia-pacific
+SSE50:IND,中国 上海50A株指数,中国,asia-pacific
+SSE180:IND,中国 上海180A株指数,中国,asia-pacific
+SHNCOMP:IND,中国 上海新総合指数(G株),中国,asia-pacific
+SZ399006:IND,中国 創業板指数,中国,asia-pacific
+SHSZ300:IND,上海/ｼﾝｾﾝ CSI300指数,中国,asia-pacific
+SZCOMP:IND,中国 深ｾﾝ総合指数,中国,asia-pacific
+HSML100:IND,ﾊﾝｾﾝ中国本土企業株100指数,香港,asia-pacific
+H-FIN:IND,ﾊﾝｾﾝ中国H株金融指数,香港,asia-pacific
+HKSPGEM:IND,S&P/HKEx GEM指数,香港,asia-pacific
+SAXCME:IND,S&Pｱｼﾞｱ50指数,香港,asia-pacific
+HSFML25:IND,ﾊﾝｾﾝ中国本土企業株25指数,香港,asia-pacific
+HKSPLC25:IND,S&P/HKEx 大型株指数,香港,asia-pacific
+HSI:IND,香港 ﾊﾝｾﾝ指数,香港,asia-pacific
+HSCEI:IND,ﾊﾝｾﾝ中国企業株指数(H株),香港,asia-pacific
+HSHK35:IND,ﾊﾝｾﾝ香港35指数,香港,asia-pacific
+HSCCI:IND,ﾊﾝｾﾝ中国ﾚｯﾄﾞﾁｯﾌﾟ指数,香港,asia-pacific
+HSCI:IND,ﾊﾝｾﾝ総合指数,香港,asia-pacific
+KOSDAQ:IND,ｺｽﾀﾞｯｸ指数,韓国,asia-pacific
+KRX100:IND,韓国 KRX100指数,韓国,asia-pacific
+KOSPI:IND,韓国総合株価指数,韓国,asia-pacific
+KOSPI2:IND,韓国200種株価指数,韓国,asia-pacific
+KOSPI50:IND,韓国50種株価指数,韓国,asia-pacific
+KOSTAR:IND,ｺｽﾀﾞｯｸ STAR指数,韓国,asia-pacific
+KOSPI100:IND,韓国100種株価指数,韓国,asia-pacific
+BSE100:IND,S&P･BSE100種指数,インド,asia-pacific
+SENSEX:IND,S&P BSEｾﾝｾｯｸｽ,インド,asia-pacific
+NIFTY:IND,CNXﾆﾌﾃｨ指数,インド,asia-pacific
+BSE500:IND,S&P･BSE500種指数,インド,asia-pacific
+BSE200:IND,S&P･BSE200種指数,インド,asia-pacific
+NZX20:IND,S&P/NZX 20 Index,ニュージーランド,asia-pacific
+NZSE:IND,NZSX 全普通株指数,ニュージーランド,asia-pacific
+NZSE50FG:IND,NZX50種ｸﾞﾛｽ指数,ニュージーランド,asia-pacific
+NZSE10:IND,NZSX ﾄｯﾌﾟ10指数,ニュージーランド,asia-pacific
+TWSE:IND,加権指数,台湾,asia-pacific
+TW50:IND,台湾50指数,台湾,asia-pacific
+TWOTCI:IND,台湾ｸﾞﾚﾀｲ証券市場指数,台湾,asia-pacific
+AS51:IND,S&P/ASX200指数,オーストラリア,asia-pacific
+AS52:IND,S&P/ASX300指数,オーストラリア,asia-pacific
+AS30:IND,ASX 全普通株指数,オーストラリア,asia-pacific
+KSE100:IND,ｶﾗﾁ KSE100指数,パキスタン,asia-pacific
+KSE30:IND,ｶﾗﾁ KSE30指数,パキスタン,asia-pacific
+KSE:IND,ｶﾗﾁ 全株指数,パキスタン,asia-pacific
+FBMKLCI:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱKLCIｲﾝﾃﾞｯｸｽ,マレーシア,asia-pacific
+FBMEMAS:IND,FTSEﾌﾞﾙｻﾏﾚｰｼｱEMASｲﾝﾃﾞｯｸｽ,マレーシア,asia-pacific
+JCI:IND,ｼﾞｬｶﾙﾀ 総合指数,インドネシア,asia-pacific
+LQ45:IND,ｼﾞｬｶﾙﾀ LQ-45種,インドネシア,asia-pacific
+STI:IND,ST指数,シンガポール,asia-pacific
+FSTAS:IND,ｼﾝｶﾞﾎﾟｰﾙ FTSE STｵｰﾙｼｪｱ,シンガポール,asia-pacific
+SET50:IND,ﾀｲ SET 50種,タイ,asia-pacific
+SET:IND,ﾀｲ SET指数,タイ,asia-pacific
+VHINDEX:IND,ﾊﾉｲ証券取引所株価指数,ベトナム,asia-pacific
+VNINDEX:IND,ﾍﾞﾄﾅﾑ VN指数,ベトナム,asia-pacific
+DSEX:IND,DSE Broad Index,バングラデシュ,asia-pacific
+MSETOP:IND,ﾓﾝｺﾞﾙ ﾄｯﾌﾟ20指数,モンゴル,asia-pacific
+LSXC:IND,ﾗｵｽ総合指数,ラオス人民民主共和国,asia-pacific
+PCOMP:IND,ﾌｨﾘﾋﾟﾝ 総合指数,フィリピン,asia-pacific
+CSEALL:IND,ｽﾘﾗﾝｶ ｺﾛﾝﾎﾞ全株指数,スリランカ,asia-pacific
+CTRN:IND,ﾅｽﾀﾞｯｸ 運輸株指数,アメリカ,americas
+SML:IND,S&P 小型株600種,アメリカ,americas
+RTY:IND,ﾗｯｾﾙ2000種指数,アメリカ,americas
+NBI:IND,ﾅｽﾀﾞｯｸ ﾊﾞｲｵﾃｸﾉﾛｼﾞｰ株指数,アメリカ,americas
+INDU:IND,NYﾀﾞｳ 工業株30種,アメリカ,americas
+CBNK:IND,ﾅｽﾀﾞｯｸ 銀行株指数,アメリカ,americas
+BBREIT:IND,ﾌﾞﾙｰﾑﾊﾞｰｸﾞ REIT指数,アメリカ,americas
+NYA:IND,NYSE 総合指数,アメリカ,americas
+NDX:IND,ﾅｽﾀﾞｯｸ 100指数,アメリカ,americas
+CFIN:IND,ﾅｽﾀﾞｯｸ 金融株指数,アメリカ,americas
+CINS:IND,ﾅｽﾀﾞｯｸ 保険株指数,アメリカ,americas
+TRAN:IND,NYﾀﾞｳ 輸送株20種,アメリカ,americas
+CUTL:IND,ﾅｽﾀﾞｯｸ 通信株指数,アメリカ,americas
+SPX:IND,S&P 500種,アメリカ,americas
+CCMP:IND,ﾅｽﾀﾞｯｸ 総合指数,アメリカ,americas
+UTIL:IND,NYﾀﾞｳ 公共株15種,アメリカ,americas
+BKX:IND,KBW銀行株指数,アメリカ,americas
+RIY:IND,ﾗｯｾﾙ1000種指数,アメリカ,americas
+NDF:IND,ﾅｽﾀﾞｯｸ 金融100指数,アメリカ,americas
+RAY:IND,ﾗｯｾﾙ3000種指数,アメリカ,americas
+IXK:IND,ﾅｽﾀﾞｯｸ ｺﾝﾋﾟｭｰﾀｰ株指数,アメリカ,americas
+MID:IND,S&P 中型株400種,アメリカ,americas
+CIND:IND,ﾅｽﾀﾞｯｸ 工業株指数,アメリカ,americas
+SPEURO:IND,S&P ﾖｰﾛｯﾊﾟ350指数,ヨーロッパ,europe-africa-middle-east
+BE500:IND,ﾌﾞﾙｰﾑﾊﾞｰｸﾞ ﾖｰﾛｯﾊﾟ500指数,ヨーロッパ,europe-africa-middle-east
+SX5E:IND,ﾕｰﾛ･ｽﾄｯｸｽ50指数,ヨーロッパ,europe-africa-middle-east
+SPEU:IND,S&P ﾕｰﾛ指数,ヨーロッパ,europe-africa-middle-east
+AXX:IND,FTSE AIM全株指数,イギリス,europe-africa-middle-east
+UKX:IND,FTSE100指数,イギリス,europe-africa-middle-east
+ASX:IND,FTSEｵｰﾙｼｪｱ指数,イギリス,europe-africa-middle-east
+KAX:IND,OMX ｺﾍﾟﾝﾊｰｹﾞﾝ指数,デンマーク,europe-africa-middle-east
+KFX:IND,OMX ｺﾍﾟﾝﾊｰｹﾞﾝ20指数,デンマーク,europe-africa-middle-east
+OMXC25:IND,OMX Copenhagen 25 Index,デンマーク,europe-africa-middle-east
+WIG20:IND,ﾜﾙｼｬﾜ WIG20種,ポーランド,europe-africa-middle-east
+WIG:IND,ﾜﾙｼｬﾜ WIG指数,ポーランド,europe-africa-middle-east
+WIG30:IND,WIG30,ポーランド,europe-africa-middle-east
+SBF250:IND,ﾌﾗﾝｽ CAC全取引可能株指数,フランス,europe-africa-middle-east
+CAC:IND,CAC40指数,フランス,europe-africa-middle-east
+XU100:IND,ｲｽﾀﾝﾌﾞｰﾙ100種指数,トルコ,europe-africa-middle-east
+XU030:IND,ｲｽﾀﾝﾌﾞｰﾙ BIST30指数,トルコ,europe-africa-middle-east
+BHSEEI:IND,ﾊﾞｰﾚｰﾝ ｴｽﾃﾗﾄﾞ指数,バーレーン,europe-africa-middle-east
+BHSEASI:IND,ﾊﾞｰﾚｰﾝ 全株指数,バーレーン,europe-africa-middle-east
+HDAX:IND,ﾄﾞｲﾂ HDAX指数,ドイツ,europe-africa-middle-east
+DAX:IND,ﾄﾞｲﾂ DAX指数,ドイツ,europe-africa-middle-east
+DFMGI:IND,ﾄﾞﾊﾞｲ金融市場総合指数,アラブ首長国連邦,europe-africa-middle-east
+ADSMI:IND,ｱﾌﾞﾀﾞﾋﾞADXｼﾞｪﾈﾗﾙ指数,アラブ首長国連邦,europe-africa-middle-east
+IMOEX:IND,MOEX Russia Index,ロシア連邦,europe-africa-middle-east
+RTSI$:IND,ﾛｼｱ RTS指数 $,ロシア連邦,europe-africa-middle-east
+ASE:IND,ｱﾃﾈ 総合指数,ギリシャ,europe-africa-middle-east
+FTASE:IND,FTSE/ASE大型株指数,ギリシャ,europe-africa-middle-east
+TOP40:IND,FTSE/JSE ｱﾌﾘｶ ﾄｯﾌﾟ40指数,南アフリカ,europe-africa-middle-east
+JALSH:IND,FTSE/JSE ｱﾌﾘｶ 全株指数,南アフリカ,europe-africa-middle-east
+HEX:IND,OMXﾍﾙｼﾝｷ全株指数,フィンランド,europe-africa-middle-east
+HEX25:IND,OMX ﾍﾙｼﾝｷ25指数,フィンランド,europe-africa-middle-east
+PFTS:IND,ｳｸﾗｲﾅ PFTS指数,ウクライナ,europe-africa-middle-east
+UX:IND,ｳｸﾗｲﾅ株価指数,ウクライナ,europe-africa-middle-east
+SPI:IND,ｽｲｽ･ﾊﾟﾌｫｰﾏﾝｽ指数 (SPI),スイス,europe-africa-middle-east
+SMI:IND,ｽｲｽ SMI指数,スイス,europe-africa-middle-east
+NSEASI:IND,ﾅｲﾛﾋﾞ証券取引所全株指数,ケニア,europe-africa-middle-east
+KNSMIDX:IND,Nairobi SE 20 Share,ケニア,europe-africa-middle-east
+KWSEPM:IND,ｸｳｪｰﾄ証券取引所ﾌﾟﾚﾐｱ･ﾏｰｹｯﾄPR指,クウェート,europe-africa-middle-east
+KWSEMM:IND,KWSE Main Mkt,クウェート,europe-africa-middle-east
+BELEX15:IND,ﾍﾞｵｸﾞﾗｰﾄﾞ BELEX15指数,セルビア,europe-africa-middle-east
+BELEXLIN:IND,ﾍﾞｵｸﾞﾗｰﾄﾞ BELEXﾗｲﾝ指数,セルビア,europe-africa-middle-east
+OSEBX:IND,ｵｽﾛ ﾍﾞﾝﾁﾏｰｸ指数,ノルウェー,europe-africa-middle-east
+OSEAX:IND,ｵｽﾛ 全株指数,ノルウェー,europe-africa-middle-east
+BUX:IND,ﾌﾞﾀﾞﾍﾟｽﾄ証取指数,ハンガリー,europe-africa-middle-east
+CHTX:IND,ﾊﾝｶﾞﾘｰ TRADED指数,ハンガリー,europe-africa-middle-east
+IBEX:IND,ｽﾍﾟｲﾝ IBEX35指数,スペイン,europe-africa-middle-east
+MADX:IND,ｽﾍﾟｲﾝ MA ﾏﾄﾞﾘｰﾄﾞ指数,スペイン,europe-africa-middle-east
+AEX:IND,ｱﾑｽﾃﾙﾀﾞﾑ AEX指数,オランダ,europe-africa-middle-east
+AMX:IND,ｱﾑｽﾃﾙﾀﾞﾑ 中型株指数,オランダ,europe-africa-middle-east
+ITLMS:IND,FTSE ｲﾀﾘｱ全株指数,イタリア,europe-africa-middle-east
+FTSEMIB:IND,ｲﾀﾘｱ FTSE MIB指数,イタリア,europe-africa-middle-east
+SASX10:IND,ｻﾗｴﾎﾞ SASEﾌﾘｰﾏｰｹｯﾄ10指数,ボスニア・ヘルツェゴビナ,europe-africa-middle-east
+BIRS:IND,ﾎﾞｽﾆｱ BIRS指数,ボスニア・ヘルツェゴビナ,europe-africa-middle-east
+BEL20:IND,ﾍﾞﾙｷﾞｰ BEL20指数,ベルギー,europe-africa-middle-east
+BELPRC:IND,BELGIAN STK MRKT PRC IDX,ベルギー,europe-africa-middle-east
+LUXXX:IND,ﾙｸｾﾝﾌﾞﾙｸ LuxX指数,ルクセンブルク,europe-africa-middle-east
+LUXXR:IND,ﾙｸｾﾝﾌﾞﾙｸ LuxX ﾘﾀｰﾝ指数,ルクセンブルク,europe-africa-middle-east
+PSI20:IND,ﾎﾟﾙﾄｶﾞﾙ PSI-20指数,ポルトガル,europe-africa-middle-east
+BVLX:IND,ﾎﾟﾙﾄｶﾞﾙ PSI全株指数,ポルトガル,europe-africa-middle-east
+TA-35:IND,ﾃﾙｱﾋﾞﾌﾞ35種指数,イスラエル,europe-africa-middle-east
+TA-125:IND,ﾃﾙｱﾋﾞﾌﾞ125種指数,イスラエル,europe-africa-middle-east
+MBI:IND,ﾏｹﾄﾞﾆｱ MBI-10指数,マケドニア,europe-africa-middle-east
+MBIDM:IND,ﾏｹﾄﾞﾆｱ MBID指数,マケドニア,europe-africa-middle-east
+ATX:IND,ｵｰｽﾄﾘｱ ATX指数,オーストリア,europe-africa-middle-east
+ATXPRIME:IND,ｵｰｽﾄﾘｱ ATXﾌﾟﾗｲﾑ指数,オーストリア,europe-africa-middle-east
+OMX:IND,OMX ｽﾄｯｸﾎﾙﾑ30指数,スウェーデン,europe-africa-middle-east
+SBX:IND,OMX ｽﾄｯｸﾎﾙﾑ･ﾍﾞﾝﾁﾏｰｸ指数,スウェーデン,europe-africa-middle-east
+TUSISE:IND,ﾁｭﾆｼﾞｱ TUNINDEX指数,チュニジア,europe-africa-middle-east
+MONEX:IND,MONEX INDEX,モンテネグロ,europe-africa-middle-east
+SASEIDX:IND,ｻｳｼﾞｱﾗﾋﾞｱ ﾀﾀﾞｳﾙ全株指数,サウジアラビア,europe-africa-middle-east
+BGSMDC:IND,ﾎﾞﾂﾜﾅ国内企業株指数,ボツワナ,europe-africa-middle-east
+DSM:IND,ｶﾀｰﾙ QE指数,カタール,europe-africa-middle-east
+JOSMGNFF:IND,ｱﾝﾏﾝ ｼﾞｪﾈﾗﾙ指数,ヨルダン,europe-africa-middle-east
+SBITOP:IND,ｽﾛﾍﾞﾆｱ優良株指数,スロベニア,europe-africa-middle-east
+PASISI:IND,PSE Al Quds,パレスチナ,europe-africa-middle-east
+NGSEINDX:IND,ﾅｲｼﾞｪﾘｱ全株指数,ナイジェリア,europe-africa-middle-east
+ICEXI:IND,OMX ICEXﾒｲﾝ指数,アイスランド,europe-africa-middle-east
+FTN098:IND,FTSE/JSE ﾅﾐﾋﾞｱ総合指数,ナミビア,europe-africa-middle-east
+CYSMMAPA:IND,ｷﾌﾟﾛｽ ｾﾞﾈﾗﾙﾏｰｹｯﾄ指数,キプロス,europe-africa-middle-east
+BLOM:IND,ﾚﾊﾞﾉﾝ BLOM指数,レバノン,europe-africa-middle-east
+MSM30:IND,ﾏｽｶｯﾄ MSM30指数,オマーン,europe-africa-middle-east
+SEMDEX:IND,ﾓｰﾘｼｬｽ SEMDEX指数,モーリシャス,europe-africa-middle-east
+ISEQ:IND,ｱｲﾙﾗﾝﾄﾞ ISEQ全株指数,アイルランド,europe-africa-middle-east
+SKSM:IND,ｽﾛﾊﾞｷｱ株価指数,スロバキア,europe-africa-middle-east
+CRO:IND,ｸﾛｱﾁｱ CROBEX指数,クロアチア,europe-africa-middle-east
+MOSENEW:IND,ﾓﾛｯｺ 全株指数 (浮動株),モロッコ,europe-africa-middle-east
+DARSDSEI:IND,Tanzania All Share Index,タンザニア,europe-africa-middle-east
+SOFIX:IND,ﾌﾞﾙｶﾞﾘｱ SOFIX指数,ブルガリア,europe-africa-middle-east
+MALTEX:IND,ﾏﾙﾀ証券取引所株価指数,マルタ,europe-africa-middle-east
+RIGSE:IND,OMX ﾘｶﾞ指数,ラトビア,europe-africa-middle-east
+TALSE:IND,OMX ﾀﾘﾝ指数,エストニア,europe-africa-middle-east
+BWORLDEU:IND,BBG ﾜｰﾙﾄﾞ 欧州株指数,ヨーロッパ・中東・アフリカ,europe-africa-middle-east
+KZKAK:IND,ｶｻﾞﾌｽﾀﾝ証券取引所指数,カザフスタン,europe-africa-middle-east
+BET:IND,ﾙｰﾏﾆｱ BET指数,ルーマニア,europe-africa-middle-east
+VILSE:IND,OMX ﾋﾞﾘﾆｭｽ指数,リトアニア,europe-africa-middle-east
+GGSECI:IND,ｶﾞｰﾅ総合指数,ガーナ,europe-africa-middle-east
+PX:IND,ﾌﾟﾗﾊ PX指数,チェコ,europe-africa-middle-east
