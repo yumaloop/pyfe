@@ -41,3 +41,27 @@ print(df_sne)
 #
 # [1258 rows x 5 columns]
 ```
+
+# Data resources
+
+### Market data
+
+- Japan
+    - TSE, (Tokyo Stock Exchange)<br>
+        - Operating company: Japan Exchange Group, Inc. (JPX)<br>
+          https://www.jpx.co.jp/
+        - 統計情報(株式関連)<br>
+          https://www.jpx.co.jp/markets/statistics-equities/index.html
+        - Stock list: 東証上場銘柄一覧<br>
+          https://www.jpx.co.jp/markets/statistics-equities/misc/01.html
+- United States
+    - NYSE (New York Stock Exchange)<br>
+        - Operating company: Intercontinental Exchange (ICE)<br>
+          https://www.theice.com/index
+        - Stock list<br>
+          https://www.nyse.com/listings_directory/stock
+    - NASDAQ (National Association of Securities Dealers Automated Quotations)
+        - Operating company: Nasdaq, Inc.
+          https://www.nasdaq.com/
+        - Stock list<br>
+          ...
