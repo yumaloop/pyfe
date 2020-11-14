@@ -5,7 +5,7 @@ import pandas_datareader
 def get_nasdaq_symbols():
     df_nasdaq = pandas_datareader.nasdaq_trader.get_nasdaq_symbols()
     df_nasdaq['Security Name'] = df_nasdaq['Security Name'].astype(str)
-    df_nasdaq.to_csv("./nasdaq_allstocks_2020.csv", index=False, quoting=csv.QUOTE_ALL)
+    df_nasdaq.to_csv("./nasdaq_allstocks_2020.csv", index=False)
 
 def get_topix_symbols():
     # all stocks (in TSE)
