@@ -1,10 +1,11 @@
+import cvxopt
 import numpy as np
 import pandas as pd
 
 
 class MarkowitzMinVarianceModel():
     
-    def __init__(self, df, window_size, rebalance_freq, r_e, r_f=float((1 + 0.0001) ** (1/12) - 1.0)):
+    def __init__(self, df, window_size, rebalance_freq, r_e=None, r_f=None):
         """
         Args:
         =====
@@ -24,19 +25,20 @@ class MarkowitzMinVarianceModel():
         self.df = df
         self.window_size = window_size
         self.rebalance_freq = rebalance_freq
-        self.r_e = r_e
-        self.r_f = r_f
+        jgb_int = 0.0001 # 0.01% per year (Japanese Government Bond)
+        self.r_f = r_f if r_f is not None else (1 + jgb_int) ** (1/12) - 1.0 # adjust monthly
+        self.r_e = r_e if r_e is not None else r_f
         
     def backtest(self):
-        date_init = df.index.values[self.window_size]
-        df_bt = pd.DataFrame([[0.0, 0.0, np.nan, np.nan, np.nan]], index=[date_init], columns=['ror_p', 'ret_p', 'var_p', 'std_p', 'sharperatio_p'])
+        date_init = self.df.index.values[self.window_size]
+        df_bt = pd.DataFrame([[0.0, np.nan]], index=[date_init], columns=['ror', 'std'])
         for idx, date in enumerate(self.df.index.values):
             if idx >= self.window_size + self.rebalance_freq:
                 if idx != 0 and idx % self.rebalance_freq == 0:        
                     # df_train
                     st = idx - self.rebalance_freq - self.window_size
                     ed = idx - self.rebalance_freq
-                    df_train = df[st:ed]
+                    df_train = self.df[st:ed]
                     df_train_retcum, df_train_retchg = self.calc_returns(df_train)
                     
                     # x_p: min variance portfolio
@@ -45,12 +47,8 @@ class MarkowitzMinVarianceModel():
                     # df_test
                     st = idx - self.rebalance_freq
                     ed = idx
-                    df_test = df[st:ed]
+                    df_test = self.df[st:ed]
                     df_test_retcum, df_test_retchg = self.calc_returns(df_test)
-                    
-                    # ret_p: cum return (portfolio)
-                    ret_test = df_test_retcum.iloc[-1].values
-                    ret_p = float(np.dot(ret_test, x_p))
                     
                     # ror_p: rate of return (portfolio)
                     ror_test = df_test_retchg.iloc[-1].values
@@ -60,12 +58,9 @@ class MarkowitzMinVarianceModel():
                     var_test = df_test_retchg.var().values
                     var_p = float(np.dot(var_test, x_p ** 2))
                     std_p = float(np.sqrt(var_p))
-                    
-                    # sharpe ratio
-                    sharperatio_p = self.sharpe_ratio(ret_p, self.r_f, std_p)
-                                        
+                                                            
                     # append
-                    df_one = pd.DataFrame([[ror_p, ret_p, var_p, std_p, sharperatio_p]], index=[date], columns=df_bt.columns)                    
+                    df_one = pd.DataFrame([[ror_p, std_p]], index=[date], columns=df_bt.columns)                    
                     df_bt = df_bt.append(df_one)
         return df_bt
 
@@ -74,14 +69,6 @@ class MarkowitzMinVarianceModel():
         cov = np.array(df_retchg.cov())
         x_opt = self.cvxopt_qp_solver(r, r_e, cov)
         return x_opt
-    
-    def sharpe_ratio(self, ret, ret_free, std):
-        """
-        ret: return of portfolio
-        ret_free: return of risk-free asset
-        std: standard deviation of portfolio
-        """
-        return (ret - ret_free) / std
         
     def cvxopt_qp_solver(self, r, r_e, cov):
         """
@@ -114,12 +101,27 @@ class MarkowitzMinVarianceModel():
         return x_opt
     
     def calc_returns(self, df):
-        # 収益率(rate of returns)
+        # Rate of returns
         df_retchg = df.pct_change()
         df_retchg[:1] = 0.0 # set 0.0 to the first record
-
-        # 累積収益率 (cumulative returns)
+        
+        # Cumulative returns)
         df_retcum = (1.0 + df_retchg).cumprod() - 1.0
         df_retcum[:1] = 0.0 # set 0.0 to the first record
         
         return df_retcum, df_retchg
+    
+    def evaluate_backtest(self, df_backtest, logging=False):            
+        self.r_mean = df_backtest["ror"].mean()
+        self.r_std = df_backtest["ror"].std() * (len(df_backtest)) / (len(df_backtest)-1)
+        self.sharpe_ratio = (self.r_mean - self.r_f) / self.r_std
+        self.net_capgain = (df_backtest["ror"] + 1.0).cumprod().iloc[-1] - 1.0
+        
+        if logging:
+            print("Portfolio Performance")
+            print("=====================")
+            print("mean of returns : {:.8f}".format(self.r_mean))
+            print("std of returns  : {:.8f}".format(self.r_std))
+            print("risk-free rate  : {:.8f}".format(self.r_f))
+            print("sharpe ratio    : {:.8f}".format(self.sharpe_ratio))
+            print("capgain ratio   : {:.8f}".format(self.net_capgain))
