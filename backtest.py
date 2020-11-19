@@ -4,7 +4,7 @@ import pandas as pd
 
 class MarkowitzMinVarianceModel():
     
-    def __init__(self, df, window_size, rebalance_freq, r_e, r_f=0.00001):
+    def __init__(self, df, window_size, rebalance_freq, r_e, r_f=float((1 + 0.0001) ** (1/12) - 1.0)):
         """
         Args:
         =====
@@ -29,31 +29,43 @@ class MarkowitzMinVarianceModel():
         
     def backtest(self):
         date_init = df.index.values[self.window_size]
-        df_bt = pd.DataFrame([[0.0, 1.0, np.nan, np.nan]], index=[date_init], columns=['ror_p', 'ret_p', 'var_p', 'sr_p'])
+        df_bt = pd.DataFrame([[0.0, 0.0, np.nan, np.nan, np.nan]], index=[date_init], columns=['ror_p', 'ret_p', 'var_p', 'std_p', 'sharperatio_p'])
         for idx, date in enumerate(self.df.index.values):
             if idx >= self.window_size + self.rebalance_freq:
                 if idx != 0 and idx % self.rebalance_freq == 0:        
-                    st_train = idx - self.rebalance_freq - self.window_size
-                    ed_train = idx - self.rebalance_freq
-                    df_train = df[st_train:ed_train]
+                    # df_train
+                    st = idx - self.rebalance_freq - self.window_size
+                    ed = idx - self.rebalance_freq
+                    df_train = df[st:ed]
                     df_train_retcum, df_train_retchg = self.calc_returns(df_train)
-                    x_p = self.mvp(df_train_retchg, self.r_e) # mvp: min var portfolio
                     
-                    st_test = idx - self.rebalance_freq
-                    ed_test = idx
-                    df_test = df[st_test:ed_test]
+                    # x_p: min variance portfolio
+                    x_p = self.mvp(df_train_retchg, self.r_e)
+                    
+                    # df_test
+                    st = idx - self.rebalance_freq
+                    ed = idx
+                    df_test = df[st:ed]
                     df_test_retcum, df_test_retchg = self.calc_returns(df_test)
                     
+                    # ret_p: cum return (portfolio)
                     ret_test = df_test_retcum.iloc[-1].values
-                    ret_p = float(np.dot(ret_test, x_p)) # return (portfolio)
-                    ror_p = ret_p - 1.0 # rate of return (portfolio)
+                    ret_p = float(np.dot(ret_test, x_p))
                     
+                    # ror_p: rate of return (portfolio)
+                    ror_test = df_test_retchg.iloc[-1].values
+                    ror_p = float(np.dot(ror_test, x_p))
+                    
+                    # var, std (portfolio)
                     var_test = df_test_retchg.var().values
-                    var_p = float(np.dot(var_test, x_p ** 2)) # variance (portfolio)
+                    var_p = float(np.dot(var_test, x_p ** 2))
+                    std_p = float(np.sqrt(var_p))
                     
-                    sr_p = self.sharp_ratio(ret_p, self.r_f, var_p)
+                    # sharpe ratio
+                    sharperatio_p = self.sharpe_ratio(ret_p, self.r_f, std_p)
                                         
-                    df_one = pd.DataFrame([[ror_p, ret_p, var_p, sr_p]], index=[date], columns=df_bt.columns)                    
+                    # append
+                    df_one = pd.DataFrame([[ror_p, ret_p, var_p, std_p, sharperatio_p]], index=[date], columns=df_bt.columns)                    
                     df_bt = df_bt.append(df_one)
         return df_bt
 
@@ -63,13 +75,13 @@ class MarkowitzMinVarianceModel():
         x_opt = self.cvxopt_qp_solver(r, r_e, cov)
         return x_opt
     
-    def sharp_ratio(self, ret, ret_free, var):
+    def sharpe_ratio(self, ret, ret_free, std):
         """
         ret: return of portfolio
         ret_free: return of risk-free asset
-        var: variance of portfolio
+        std: standard deviation of portfolio
         """
-        return (ret - ret_free) / np.sqrt(var)
+        return (ret - ret_free) / std
         
     def cvxopt_qp_solver(self, r, r_e, cov):
         """
@@ -83,13 +95,20 @@ class MarkowitzMinVarianceModel():
         """
         n = len(r)
         r = cvxopt.matrix(r)
+
+        # Create Objective matrices
         P = cvxopt.matrix(2.0 * np.array(cov))
         q = cvxopt.matrix(np.zeros((n, 1)))
-        G = cvxopt.matrix(np.concatenate((-np.transpose(r), -np.identity(n)), 0))
-        h = cvxopt.matrix(np.concatenate((-np.ones((1,1)) * r_e, np.zeros((n,1))), 0))
+
+        # Create constraint matrices
+        G = cvxopt.matrix(np.concatenate((-np.transpose(r), -np.eye(n)), 0))
+        h = cvxopt.matrix(np.concatenate((-np.ones((1,1))*r_e, np.zeros((n,1))), 0))
         A = cvxopt.matrix(1.0, (1, n))
         b = cvxopt.matrix(1.0)
+        
+        # stop log messages
         cvxopt.solvers.options['show_progress'] = False
+        
         sol = cvxopt.solvers.qp(P, q, G, h, A, b)
         x_opt = np.squeeze(np.array(sol['x']))
         return x_opt
@@ -100,7 +119,7 @@ class MarkowitzMinVarianceModel():
         df_retchg[:1] = 0.0 # set 0.0 to the first record
 
         # 累積収益率 (cumulative returns)
-        df_retcum = (1 + df_retchg).cumprod()
-        df_retcum[:1] = 1.0 # set 1.0 to the first record
+        df_retcum = (1.0 + df_retchg).cumprod() - 1.0
+        df_retcum[:1] = 0.0 # set 0.0 to the first record
         
         return df_retcum, df_retchg
