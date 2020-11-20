@@ -46,6 +46,8 @@ link to get the list of ticker symbols:
           https://www.jpx.co.jp/markets/statistics-equities/index.html
         - Stock list: 東証上場銘柄一覧<br>
           https://www.jpx.co.jp/markets/statistics-equities/misc/01.html
+        - 株価指数
+          - 株価指数ラインナップ https://www.jpx.co.jp/markets/indices/line-up/index.html
         - Risk-free rate<br>
           - 日本国債10年物利回り: 0.01% [日本国債・金利 - Bloomberg](https://www.bloomberg.co.jp/markets/rates-bonds/government-bonds/japan)
           - 無担保コールレート: 0.001% [コール市場関連統計(毎営業日) - 日本銀行](https://www3.boj.or.jp/market/jp/menu_m.htm)
