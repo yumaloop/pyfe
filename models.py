@@ -29,8 +29,8 @@ class MarkowitzMinVarianceModel():
         self.df_bt = None
         self.window_size = window_size
         self.rebalance_freq = rebalance_freq
-        jgb_int = 0.0001 # 0.01% per year (Japanese Government Bond)
-        self.r_f = r_f if r_f is not None else (1 + jgb_int) ** (1/12) - 1.0 # adjust monthly
+        self.jgb_int = 0.0001 # 0.01% per year (Japanese Government Bond)
+        self.r_f = r_f if r_f is not None else self.jgb_int * (1/12) # adjust monthly
         self.r_e = r_e if r_e is not None else r_f
         
     def backtest(self):
@@ -125,19 +125,27 @@ class MarkowitzMinVarianceModel():
             self.r_std = self.df_bt["ror"].std(ddof=True)
             self.sharpe_ratio = (self.r_mean - self.r_f) / self.r_std
             self.net_capgain = (self.df_bt["ror"] + 1.0).cumprod().iloc[-1] - 1.0
+            
+            self.r_mean_peryear = 12 * self.r_mean
+            self.r_std_peryear = np.sqrt(12) * self.r_std
+            self.sharpe_ratio_peryear = (self.r_mean_peryear - self.jgb_int) / self.r_std_peryear
 
             if logging:
                 print("Portfolio Performance")
-                print("=====================")
-                print("mean of returns : {:.8f}".format(self.r_mean))
-                print("std of returns  : {:.8f}".format(self.r_std))
-                print("risk-free rate  : {:.8f}".format(self.r_f))
-                print("sharpe ratio    : {:.8f}".format(self.sharpe_ratio))
-                print("capgain ratio   : {:.8f}".format(self.net_capgain))
+                print("=======================")
+                print("Returns per month")
+                print("  sharpe ratio     : {:.8f}".format(self.sharpe_ratio))
+                print("  mean of returns  : {:.8f}".format(self.r_mean))
+                print("  std of returns   : {:.8f}".format(self.r_std))
+                print("    risk-free rate : {:.8f}".format(self.r_f))
+                print("    capgain ratio  : {:.8f}".format(self.net_capgain))
+                print("Returns per year")
+                print("  sharpe ratio     : {:.8f}".format(self.sharpe_ratio_peryear))
+                print("  mean of returns  : {:.8f}".format(self.r_mean_peryear))
+                print("  std of returns   : {:.8f}".format(self.r_std_peryear))
+                
             
     def plot_returns(self):
-
-
         if self.df_bt is None:
             pass
         else:

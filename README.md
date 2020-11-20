@@ -70,6 +70,12 @@ link to get the list of ticker symbols:
         - List of all stocks<br>
           download link: https://old.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=amex&render=download
 
+### Funds
+
+- 国内株式
+  - 日経投資信託ランキング (シャープレシオ)
+    https://www.nikkei.com/markets/fund/ranking/?type=sharperatio&term=1y&category1=&page=1
+
 # References
 
 - https://investexcel.net/
