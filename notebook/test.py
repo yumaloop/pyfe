@@ -37,4 +37,4 @@ for symbol in tqdm(symbols_tpx500):
         pass
     
 df = pd.concat(dfs, axis=1)
-df.to_csv("../data/tse_tpx500_20111031-202010131.csv", index=False)
+df.to_csv("../data/tse_tpx500_20111031-202010131.csv")
