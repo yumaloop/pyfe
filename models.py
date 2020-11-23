@@ -153,6 +153,8 @@ class MarkowitzMinVarianceModel():
             plt.plot(self.df_bt.index.values, self.df_bt["ror"].values, label="rate of returns")
             plt.plot(self.df_bt.index.values, self.df_bt["ror"].cumsum().values, label="total capital gain ratio")
             plt.legend(loc="upper left")
+            plt.xticks([d for idx, d in enumerate(self.df_bt.index) if idx % 12 == 0])
+            plt.xticks(rotation=45)
             plt.show()
 
 
@@ -302,4 +304,6 @@ class SharpeRatioMaxModel():
             plt.plot(self.df_bt.index.values, self.df_bt["ror"].values, label="rate of returns")
             plt.plot(self.df_bt.index.values, self.df_bt["ror"].cumsum().values, label="total capital gain ratio")
             plt.legend(loc="upper left")
+            plt.xticks([d for idx, d in enumerate(self.df_bt.index) if idx % 12 == 0])
+            plt.xticks(rotation=45)
             plt.show()

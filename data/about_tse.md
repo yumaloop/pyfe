@@ -14,3 +14,22 @@ You can get all stocks listed on Tokyo Stock Exchange (TSE) from [this url](http
 
 例: TOPIX500構成銘柄を集計したい場合，「規模区分」がTOPIX Core30, TOPIX Large70, TOPIX Mid400のいずれかである銘柄を集計すればよい．
 
+
+```
+■インデックスの主な構成　（2008年11月現在）
+
+・TOPIX（東証株価指数）
+・TOPIXニューインデックスシリーズ
+　　　　TOPIX 1000
+　　　　　　├TOPIX 500 （大型/中型株）
+　　　　　　　　　├TOPIX 100 （大型株）
+　　　　　　　　　　　　├TOPIX Core30 （超大型株）
+　　　　　　　　　　　　└TOPIX Large70
+　　　　　　　　　└TOPIX Mid400 （中型株）
+　　　　　　└TOPIX Small （小型株）
+・東証規模別株価指数（大型株・中型株・小型株）
+・東証業種別株価指数（33業種）
+・TOPIX-17シリーズ（33業種を17業種に集約）
+・東証第二部株価指数
+・東証マザーズ指数
+```

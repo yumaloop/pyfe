@@ -9,19 +9,19 @@ from datetime import datetime
 from pprint import pprint
 from models import MarkowitzMinVarianceModel
 
-# all symbols in TOPIX 500 on 2011/10/31
-df_tpx500 = pd.read_csv("../data/master/universe_tse_topix500_20011031-20201031.csv")
-s = df_tpx500["20111031"].values
+# all symbols in TOPIX Core30 on 2011/10/31
+df_tpx30 = pd.read_csv("../data/master/universe_tse_topixcore30_20111031-20201031.csv")
+s = df_tpx30["20111031"].values
 s = s[~np.isnan(s)] # delete nan
-symbols_tpx500 = s.astype(np.int64).astype(str) # cast as str type
-symbols_tpx500 = [str(s)+'.T' for s in symbols_tpx500]
+symbols_tpx30 = s.astype(np.int64).astype(str) # cast as str type
+symbols_tpx30 = [str(s)+'.T' for s in symbols_tpx30]
 
 
 # df: time-series price data of stocks in `symbols_tpx500`
-st = datetime(2011, 10, 31)
+st = datetime(2000, 10, 31)
 ed = datetime(2020, 10, 31)
 dfs = []
-for symbol in tqdm(symbols_tpx500):
+for symbol in tqdm(symbols_tpx30):
     try:
         df = pandas_datareader.data.DataReader(symbol, 'yahoo', st, ed) # daily
         df = df.sort_values(by='Date', ascending=True)
@@ -49,5 +49,4 @@ for col in df.columns:
             df[col] = df[col].fillna(df[col][ed_idx])
 
 # save df as .csv file
-if not df.isnull().any()
-    df.to_csv("./tse_tpx500_20111031-202010131.csv", index=True)
+df.to_csv("./tse_topixcore30_20011031-202010131.csv", index=True)
