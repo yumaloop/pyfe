@@ -44,8 +44,14 @@ class MarkowitzMinVarianceModel():
                     ed = idx - self.rebalance_freq
                     df_chg_train = self.df_chg[st:ed]
                     
+                    if isinstance(self.r_e, pd.core.frame.DataFrame):
+                        # r_e = self.r_e.iloc[st:ed].values.mean()
+                        r_e = self.r_e.iloc[st:ed].values.min()
+                    else:
+                        r_e = self.r_e
+                    
                     # x_p: min variance portfolio
-                    x_p = self.calc_portfolio(df_chg_train, self.r_e)
+                    x_p = self.calc_portfolio(df_chg_train, r_e)
                     
                     # df_chg_test
                     st = idx - self.rebalance_freq
@@ -99,8 +105,9 @@ class MarkowitzMinVarianceModel():
         A = cvxopt.matrix(1.0, (1, n))
         b = cvxopt.matrix(1.0)
         
-        # stop log messages
-        cvxopt.solvers.options['show_progress'] = False
+        # Adjust params (stop log messages)
+        cvxopt.solvers.options['show_progress'] = False # default: True
+        cvxopt.solvers.options['maxiters'] = 1000 # default: 100
         
         sol = cvxopt.solvers.qp(P, q, G, h, A, b)
         x_opt = np.squeeze(np.array(sol['x']))
