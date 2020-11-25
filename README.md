@@ -75,9 +75,17 @@ link to get the list of ticker symbols:
 - 国内株式
   - 日経投資信託ランキング (シャープレシオ)
     https://www.nikkei.com/markets/fund/ranking/?type=sharperatio&term=1y&category1=&page=1
-
-# References
-
 - https://investexcel.net/
 - https://plotly.com/python/v3/ipython-notebooks/markowitz-portfolio-optimization/#backtesting-on-real-market-data
 
+# References
+
+**Peer-reviewed Journals**
+- [The Journal of Financial Data Science](https://jfds.pm-research.com/)
+- [The Journal of Portfolio Management](https://jpm.pm-research.com/)
+- [The Journal of Algorithmic Finance](http://www.algorithmicfinance.org/)
+- [Cambridge University Press](https://www.cambridge.org/)
+
+**Textbooks**
+- Advances in Financial Machine Learning
+- Machine Learning for Asset Managers
