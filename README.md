@@ -89,3 +89,9 @@ link to get the list of ticker symbols:
 **Textbooks**
 - Advances in Financial Machine Learning
 - Machine Learning for Asset Managers
+
+**Community**
+
+- [Quants Portal](http://www.quantsportal.com/)
+
+
