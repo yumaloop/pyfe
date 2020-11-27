@@ -87,9 +87,10 @@ link to get the list of ticker symbols:
 - [Cambridge University Press](https://www.cambridge.org/)
 
 **Textbooks**
-- [金融工学入門 第2版 (日本語訳)](https://www.amazon.co.jp/dp/4532134587), by David G. Luenberger
+- [Investment Science](https://www.amazon.com/dp/0195108094), by David G. Luenberger, Oxford University Press (July 3, 1997)
+- [金融工学入門 第2版 (日本語訳)](https://www.amazon.co.jp/dp/4532134587), by David G. Luenberger, 日本経済新聞出版; 第2版 (2015/3/26)
 - [Advances in Financial Machine Learning](https://www.amazon.com/dp/1119482089), by Marcos Lopez de Prado, Wiley; 1st edition (February 21, 2018)
-- [Machine Learning for Asset Managers](https://www.amazon.com/dp/1108792898), by by Marcos M López de Prado, Cambridge University Press (April 30, 2020)
+- [Machine Learning for Asset Managers](https://www.amazon.com/dp/1108792898), by Marcos M López de Prado, Cambridge University Press (April 30, 2020)
 
 **Community**
 - [Quants Portal](http://www.quantsportal.com/)
