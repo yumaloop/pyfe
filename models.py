@@ -45,8 +45,8 @@ class MarkowitzMinVarianceModel():
                     df_chg_train = self.df_chg[st:ed]
                     
                     if isinstance(self.r_e, pd.core.frame.DataFrame):
-                        # r_e = self.r_e.iloc[st:ed].values.mean()
-                        r_e = self.r_e.iloc[st:ed].values.min()
+                        r_e = self.r_e.iloc[st:ed].values.mean()
+                        # r_e = self.r_e.iloc[st:ed].values.min()
                     else:
                         r_e = self.r_e
                     
