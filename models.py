@@ -22,20 +22,35 @@ class MarkowitzMinVarianceModel():
         rate of returns of the risk-free asset.
     """
     def __init__(self, df, window_size, rebalance_freq, r_e=None, r_f=None):
-        
-        self.df = df
-        self.df_chg = df.pct_change()
+        self.df = self._reset_index(df)
+        self.df_chg = self.df.pct_change()
         self.df_chg[:1] = 0.0 # set 0.0 to the first record
         self.df_bt = None
+        self.df_bt_r = None
+        self.df_bt_x = None
         self.window_size = window_size
         self.rebalance_freq = rebalance_freq
         self.jgb_int = 0.0001 # 0.01% per year (Japanese Government Bond)
         self.r_f = r_f if r_f is not None else self.jgb_int * (1/12) # adjust monthly
         self.r_e = r_e if r_e is not None else r_f
         
+    def _reset_index(self, df):
+        df = df.copy()
+        df['date'] = pd.to_datetime(df.index)
+        df = df.set_index('date')
+        return df
+    
+    def get_dfbt_r(self):
+        return self.df_bt_r
+    
+    def get_dfbt_x(self):
+        return self.df_bt_x
+        
     def backtest(self):
         date_init = self.df.index.values[self.window_size]
         df_bt = pd.DataFrame([[0.0, np.nan]], index=[date_init], columns=['ror', 'std'])
+        df_bt_r = pd.DataFrame(columns=list(self.df.columns.values))
+        df_bt_x = pd.DataFrame(columns=list(self.df.columns.values))
         for idx, date in enumerate(self.df.index.values):
             if idx >= self.window_size + self.rebalance_freq:
                 if (idx - self.window_size) % self.rebalance_freq == 0:
@@ -44,9 +59,9 @@ class MarkowitzMinVarianceModel():
                     ed = idx - self.rebalance_freq
                     df_chg_train = self.df_chg[st:ed]
                     
+                    # expected returns per target term
                     if isinstance(self.r_e, pd.core.frame.DataFrame):
                         r_e = self.r_e.iloc[st:ed].values.mean()
-                        # r_e = self.r_e.iloc[st:ed].values.min()
                     else:
                         r_e = self.r_e
                     
@@ -62,6 +77,8 @@ class MarkowitzMinVarianceModel():
                     # ror_p: rate of return (portfolio)
                     ror_test = df_chgcum_test.iloc[-1].values
                     ror_p = float(np.dot(ror_test, x_p))
+                    df_bt_r.loc[date] = ror_test
+                    df_bt_x.loc[date] = x_p
                     
                     # std (portfolio)
                     if self.rebalance_freq == 1:
@@ -73,8 +90,12 @@ class MarkowitzMinVarianceModel():
                     # append
                     df_one = pd.DataFrame([[ror_p, std_p]], index=[date], columns=df_bt.columns)                    
                     df_bt = df_bt.append(df_one)
-        self.df_bt = df_bt
-        return df_bt
+                    
+        # reset index
+        self.df_bt = self._reset_index(df_bt)
+        self.df_bt_r = self._reset_index(df_bt_r)  
+        self.df_bt_x = self._reset_index(df_bt_x)  
+        return self.df_bt
 
     def calc_portfolio(self, df_retchg, r_e):
         r = df_retchg.mean().values
@@ -124,6 +145,15 @@ class MarkowitzMinVarianceModel():
         
         return df_retcum, df_retchg
     
+    def get_yearly_performance(self):
+        if self.df_bt is None:
+            pass
+        else:
+            df_yearly = self.df_bt[["ror"]].resample('y').sum()
+            df_yearly["std"] = self.df_bt["ror"].resample('y').std().values
+            df_yearly["sharpe_ratio"] = df_yearly.apply(lambda d: (d["ror"] - self.r_f) / d["std"], axis=1)
+            return df_yearly
+
     def evaluate_backtest(self, logging=False):   
         if self.df_bt is None:
             pass
@@ -156,15 +186,28 @@ class MarkowitzMinVarianceModel():
         if self.df_bt is None:
             pass
         else:
-            fig = plt.figure(figsize=(12,6))
-            plt.plot(self.df_bt.index.values, self.df_bt["ror"].values, label="rate of returns")
-            plt.plot(self.df_bt.index.values, self.df_bt["ror"].cumsum().values, label="total capital gain ratio")
-            plt.legend(loc="upper left")
-            plt.xticks([d for idx, d in enumerate(self.df_bt.index) if idx % 12 == 0])
-            plt.xticks(rotation=45)
-            return fig            
-
+            xlabels = [d.strftime('%Y-%m') for idx, d in enumerate(self.df_bt.index) if idx % 12 == 0]
             
+            fig, ax = plt.subplots(figsize=(12,6))
+            ax.plot(self.df_bt.index.values, self.df_bt["ror"].values, label="rate of returns")
+            ax.plot(self.df_bt.index.values, self.df_bt["ror"].cumsum().values, label="total capital gain ratio")
+            ax.legend(loc="upper left")
+            ax.set_xticks(xlabels)
+            ax.set_xticklabels(xlabels, rotation=40)
+            return fig            
+        
+    def plot_returns_histgram(self):
+        if self.df_bt is None:
+            pass
+        else:
+            x = self.df_bt["ror"].values
+            r_mean = "{:.4f}".format(x.mean())
+            r_std = "{:.4f}".format(x.std())
+            
+            fig, ax = plt.subplots(figsize=(12,6))
+            ax.hist(x, bins=30, alpha=0.75)
+            ax.set_title(f"mean={r_mean}, std={r_std}")
+            return fig
 
 
 class SharpeRatioMaxModel():
@@ -183,18 +226,34 @@ class SharpeRatioMaxModel():
         rate of returns of the risk-free asset.
     """
     def __init__(self, df, window_size, rebalance_freq, r_f=None):
-        self.df = df
-        self.df_chg = df.pct_change()
+        self.df = self._reset_index(df)
+        self.df_chg = self.df.pct_change()
         self.df_chg[:1] = 0.0 # set 0.0 to the first record
         self.df_bt = None
+        self.df_bt_r = None
+        self.df_bt_x = None
         self.window_size = window_size
         self.rebalance_freq = rebalance_freq
         self.jgb_int = 0.0001 # 0.01% per year (Japanese Government Bond)
         self.r_f = r_f if r_f is not None else self.jgb_int * (1/12) # adjust monthly
         
+    def _reset_index(self, df):
+        df = df.copy()
+        df['date'] = pd.to_datetime(df.index)
+        df = df.set_index('date')
+        return df
+    
+    def get_dfbt_r(self):
+        return self.df_bt_r
+    
+    def get_dfbt_x(self):
+        return self.df_bt_x
+        
     def backtest(self):
         date_init = self.df.index.values[self.window_size]
         df_bt = pd.DataFrame([[0.0, np.nan]], index=[date_init], columns=['ror', 'std'])
+        df_bt_r = pd.DataFrame(columns=list(self.df.columns.values))
+        df_bt_x = pd.DataFrame(columns=list(self.df.columns.values))
         for idx, date in enumerate(self.df.index.values):
             if idx >= self.window_size + self.rebalance_freq:
                 if (idx - self.window_size) % self.rebalance_freq == 0:
@@ -215,6 +274,8 @@ class SharpeRatioMaxModel():
                     # ror_p: rate of return (portfolio)
                     ror_test = df_chgcum_test.iloc[-1].values
                     ror_p = float(np.dot(ror_test, x_p))
+                    df_bt_r.loc[date] = ror_test
+                    df_bt_x.loc[date] = x_p
                     
                     # std (portfolio)
                     if self.rebalance_freq == 1:
@@ -226,8 +287,12 @@ class SharpeRatioMaxModel():
                     # append
                     df_one = pd.DataFrame([[ror_p, std_p]], index=[date], columns=df_bt.columns)                    
                     df_bt = df_bt.append(df_one)
-        self.df_bt = df_bt
-        return df_bt
+        
+        # reset index
+        self.df_bt = self._reset_index(df_bt)
+        self.df_bt_r = self._reset_index(df_bt_r)        
+        self.df_bt_x = self._reset_index(df_bt_x)
+        return self.df_bt
 
     def calc_portfolio(self, df_retchg, r_f): 
         """ portfolio (sharpe-ratio max model) """
@@ -277,6 +342,15 @@ class SharpeRatioMaxModel():
         
         return df_retcum, df_retchg
     
+    def get_yearly_performance(self):
+        if self.df_bt is None:
+            pass
+        else:
+            df_yearly = self.df_bt[["ror"]].resample('y').sum()
+            df_yearly["std"] = self.df_bt["ror"].resample('y').std().values
+            df_yearly["sharpe_ratio"] = df_yearly.apply(lambda d: (d["ror"] - self.r_f) / d["std"], axis=1)
+            return df_yearly
+    
     def evaluate_backtest(self, logging=False):   
         if self.df_bt is None:
             pass
@@ -309,10 +383,26 @@ class SharpeRatioMaxModel():
         if self.df_bt is None:
             pass
         else:
-            fig = plt.figure(figsize=(12,6))
-            plt.plot(self.df_bt.index.values, self.df_bt["ror"].values, label="rate of returns")
-            plt.plot(self.df_bt.index.values, self.df_bt["ror"].cumsum().values, label="total capital gain ratio")
-            plt.legend(loc="upper left")
-            plt.xticks([d for idx, d in enumerate(self.df_bt.index) if idx % 12 == 0])
-            plt.xticks(rotation=45)
+            xlabels = [d.strftime('%Y-%m') for idx, d in enumerate(self.df_bt.index) if idx % 12 == 0]
+            
+            fig, ax = plt.subplots(figsize=(12,6))
+            ax.plot(self.df_bt.index.values, self.df_bt["ror"].values, label="rate of returns")
+            ax.plot(self.df_bt.index.values, self.df_bt["ror"].cumsum().values, label="total capital gain ratio")
+            ax.legend(loc="upper left")
+            ax.set_xticks(xlabels)
+            ax.set_xticklabels(xlabels, rotation=40)
+            return fig  
+        
+        
+    def plot_returns_histgram(self):
+        if self.df_bt is None:
+            pass
+        else:
+            x = self.df_bt["ror"].values
+            r_mean = "{:.4f}".format(x.mean())
+            r_std = "{:.4f}".format(x.std())
+            
+            fig, ax = plt.subplots(figsize=(12,6))
+            ax.hist(x, bins=30, alpha=0.75)
+            ax.set_title(f"mean={r_mean}, std={r_std}")
             return fig
