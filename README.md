@@ -78,6 +78,10 @@ link to get the list of ticker symbols:
 - https://investexcel.net/
 - https://plotly.com/python/v3/ipython-notebooks/markowitz-portfolio-optimization/#backtesting-on-real-market-data
 
+### Technical
+
+- http://kabu.com/investment/guide/technical/01.html
+
 # References
 
 **Peer-reviewed Journals**
