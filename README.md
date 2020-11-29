@@ -51,6 +51,7 @@ link to get the list of ticker symbols:
         - Risk-free rate<br>
           - 日本国債10年物利回り: 0.01% [日本国債・金利 - Bloomberg](https://www.bloomberg.co.jp/markets/rates-bonds/government-bonds/japan)
           - 無担保コールレート: 0.001% [コール市場関連統計(毎営業日) - 日本銀行](https://www3.boj.or.jp/market/jp/menu_m.htm)
+          - 短期金利(overnight rate)
 - United States
     - NASDAQ (National Association of Securities Dealers Automated Quotations)
         - Operating company: Nasdaq, Inc.
@@ -98,3 +99,8 @@ link to get the list of ticker symbols:
 
 **Community**
 - [Quants Portal](http://www.quantsportal.com/)
+
+**Media**
+- [seekingalpha.com](https://seekingalpha.com/)
+- [talkmarkets.com](https://talkmarkets.com/)
+
