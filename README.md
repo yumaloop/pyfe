@@ -15,8 +15,8 @@ pip3 install cvxopt
 ### Index
 
 link to get the list of ticker symbols:
-- https://stooq.com/t/
-- https://finance.yahoo.com/trending-tickers
+- [list of ticker symbols, stooq](https://stooq.com/t/)
+- [list of ticker symbols, yahoo](https://finance.yahoo.com/trending-tickers)
 
 
 - Japan
