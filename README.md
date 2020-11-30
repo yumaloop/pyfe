@@ -19,6 +19,11 @@ link to get the list of ticker symbols:
 - [list of ticker symbols, yahoo](https://finance.yahoo.com/trending-tickers)
 
 
+**Cryptocurrency**
+- Bitcoin
+    - `BTC-USD`(yahoo)
+
+**Equity Market**
 - Japan
     - TOPIX500
         - `^TPX`(stooq)
