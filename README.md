@@ -105,6 +105,11 @@ link to get the list of ticker symbols:
   - Frequency: Yearly
   - [Archive in IOS](https://www.iospress.nl/journal/algorithmic-finance/)
   - [Archive in SSRN](https://papers.ssrn.com/sol3/JELJOUR_Results.cfm?form_name=journalbrowse&journal_id=1676554)
+- [The Journal of Index Investing](https://jii.pm-research.com/)
+  - About: ETFs, ETPs
+  - Editor: Brian Bruce
+  - First published: 2010
+  - Frequency: Quarterly
 - [The Journal of Investing](https://joi.pm-research.com/)
   - Editor: Brian Bruce
   - First published: 1992
