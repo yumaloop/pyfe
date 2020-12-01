@@ -92,9 +92,26 @@ link to get the list of ticker symbols:
 
 **Peer-reviewed Journals**
 - [The Journal of Financial Data Science](https://jfds.pm-research.com/)
+  - Editors: Frank J. Fabozzi | Marcos Lopéz de Prado | Joseph Simonian
+  - First published: 2019
+  - Frequency: Quarterly
 - [The Journal of Portfolio Management](https://jpm.pm-research.com/)
+  - Editor: Frank J. Fabozzi
+  - First published: 1974
+  - Frequency: 6 annual issues
 - [The Journal of Algorithmic Finance](http://www.algorithmicfinance.org/)
-- [Cambridge University Press](https://www.cambridge.org/)
+  - Editor: Philip Maymin
+  - First published: 2011
+  - Frequency: Yearly
+  - [Archive in IOS](https://www.iospress.nl/journal/algorithmic-finance/)
+  - [Archive in SSRN](https://papers.ssrn.com/sol3/JELJOUR_Results.cfm?form_name=journalbrowse&journal_id=1676554)
+- [The Journal of Investing](https://joi.pm-research.com/)
+  - Editor: Brian Bruce
+  - First published: 1992
+  - Frequency: Quarterly
+
+Also, check [here](https://www.pm-research.com/journals).
+
 
 **Textbooks**
 - [Investment Science](https://www.amazon.com/dp/0195108094), by David G. Luenberger, Oxford University Press (July 3, 1997)
